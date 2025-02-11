@@ -54,11 +54,11 @@
                                         <h5 class="card-title text-center pb-0 fs-4">Register to Your Account</h5>
                                         <p class="text-center small">Enter your username & password to Register</p>
                                     </div>
-                                    <form class="row g-3" action="{{route('register-proses')}}" method="post">
+                                    <form class="row g-3" action="{{route('Reg.Process')}}" method="POST">
                                     @csrf
                                     <div class="col-12">
                                         <label class="form-label">Nama Lengkap</label>
-                                        <input type="text" name="name" class="form-control" value="{{ old('name')}}" autocomplete="name">
+                                        <input type="text" name="nama" class="form-control" value="{{ old('name')}}" autocomplete="name">
                                         @error('name')
                                             <small class="bg-warning">{{$message}}</small>
                                         @enderror

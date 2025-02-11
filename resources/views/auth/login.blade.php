@@ -54,6 +54,7 @@
                                         <h5 class="card-title text-center pb-0 fs-4">Login to Your Account</h5>
                                         <p class="text-center small">Enter your username & password to login</p>
                                     </div>
+
                                     <form class="row g-3" action="{{route('login-proses')}}" method="post">
                                     @csrf
                                     <div class="col-12">
@@ -128,6 +129,15 @@
             Swal.fire({
                 icon: 'success',
                 title: 'logout',
+                text: '{{ Session::get("success") }}'
+            });
+        </script>
+    @endif
+    @if (Session::has('sukses'))
+        <script>
+            Swal.fire({
+                icon: 'success',
+                title: 'Registerasi Berhasil',
                 text: '{{ Session::get("success") }}'
             });
         </script>
